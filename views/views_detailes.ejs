@@ -1,0 +1,32 @@
+<a href="/" style="list-style: none; text-decoration: none; border: 1px solid black; background-color: antiquewhite;"> formpage</a>
+<table border="1" >
+    <thead>
+        <tr>
+            <th>no</th>
+            <th>name</th>
+            <th>age</th>
+            <th>gender</th>
+            <th>hobbies</th>
+            <th>images</th>
+            <th>city</th>
+            <th>action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% var i=1; for(var v of stdetailes){%>
+        <tr>
+            <td><%=i%></td>
+            <td><%=v.name%></td>
+            <td><%=v.age%></td>
+            <td><%=v.gender%></td>
+            <td><%=v.hobbies%></td>
+            <td><img src="<%=v.adminimage%>" alt="" height="100px"; width="100px"></td>
+            <td><%=v.city%></td>
+
+            <td><a href="/deletestudent/<%=v.id%>">delete</a>||
+                <a href="/updatestudent/<%=v.id%>">update</a>
+            </td>
+        </tr>
+        <%i++;}%>
+    </tbody>
+</table>

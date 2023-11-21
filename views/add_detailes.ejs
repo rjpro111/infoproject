@@ -1,0 +1,23 @@
+<form action="/addstudetailes" method="post" enctype="multipart/form-data" style="border: 1px solid black; height: 300px; width: 400px;">
+   
+    name:<input type="text" name="name"><br>
+    age:<input type="text" name="age"><br>
+    gender: <input type="radio" name="gender" value="male"> male
+    <input type="radio" name="gender" value="female"> female<br><br>
+    hobbies: <input type="checkbox" name="hobbies" value="swimming"> swimming
+             <input type="checkbox" name="hobbies" value="reading"> reading
+             <input type="checkbox" name="hobbies" value="running"> running <br>
+             <%var city=["surat","ahmdabad","vadodara","navsari"]%>
+
+    city: <select name="city">
+            <option value="">---select city---</option>
+            <%city.map((v)=>{%>
+               <option value="<%=v%>"><%=v%></option>
+            <%})%> 
+          </select> <br>  
+
+    image:<input type="file" name="adminage"><br>        
+             
+    <input type="submit" name="add data">
+    <a href="/views_detailes"  style="list-style: none; text-decoration: none; border: 1px solid black; background-color: antiquewhite;">view page</a>
+</form>
